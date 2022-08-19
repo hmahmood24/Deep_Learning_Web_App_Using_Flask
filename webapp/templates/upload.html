@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+    <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link active" aria-current="page" href="/predict/">Predict</a>
+    </nav>
+{% endblock %}
+
+{% block main %}
+    <h1>{{ filename }}</h1>
+    <p class="lead">{{ result }}</p>
+    <p class="lead">
+        <a href="/predict/" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Try Again</a>
+    </p>
+{% endblock %}

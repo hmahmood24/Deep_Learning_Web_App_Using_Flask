@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+    <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link active" aria-current="page" href="/">Home</a>
+        <a class="nav-link" href="/predict/">Predict</a>
+    </nav>
+{% endblock %}
+
+{% block main %}
+    <h1>Welcome to PneuXNet!</h1>
+    <p class="lead">PneuXNet is a powerful web application to predict Pneumonia from Chest X-Ray Images!</p>
+    <p class="lead">
+        <a href="/predict/" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Get Started</a>
+    </p>
+{% endblock %}
+

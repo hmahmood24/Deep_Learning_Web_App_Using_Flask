@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+    <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link active" aria-current="page" href="/predict/">Predict</a>
+    </nav>
+{% endblock %}
+
+{% block main %}
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class=flashes>
+                {% for message in messages %}
+                    <p class="lead">{{ message }}</p>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <h1>Upload a Chest X-Ray Image (supported formats .jpg, .png, .jpeg)</h1>
+
+    <form method="post" action="/upload/" enctype="multipart/form-data">
+
+        <div class="input-group" style="margin-top: 25px;">
+            <input type="file" class="form-control" name="file" id="file" 
+            aria-describedby="inputGroupFileAddon04" aria-label="Upload" required>
+        </div>
+        <p class="lead">
+            <input type="submit" value='Upload' class="btn btn-lg btn-secondary fw-bold border-white bg-white"
+                style="margin-top: 25px;">
+        </p>
+
+    </form>
+{% endblock %}
