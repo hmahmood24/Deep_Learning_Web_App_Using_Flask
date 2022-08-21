@@ -8,4 +8,6 @@ This file contains the necessary information about the project environment and t
 
 The required packages needed to run the project can be found in the `requirements.txt` file.
 
-Note: This repository is part of this [blog post](https://writersbyte.com/programming/deep-learning-on-the-web-using-flask)
+## Setup
+
+A detailed tutorial and the steps to reproduce this project are described in this [blog post](https://writersbyte.com/programming/deep-learning-on-the-web-using-flask)
