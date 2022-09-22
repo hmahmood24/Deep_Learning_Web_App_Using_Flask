@@ -1,0 +1,15 @@
+[Unit]
+Description=PneuXNet Web Application Gunicorn Service
+After=network.target
+
+[Service]
+User=haris
+Group=www-data
+Restart=always
+RestartSec=1
+WorkingDirectory=/home/haris/webapp
+Environment="PATH=/home/haris/webapp/env/bin"
+ExecStart=/home/haris/webapp/env/bin/gunicorn webapp:webapp --bind=unix:/home/haris/gunicorn/gunicorn_webapp.sock --log-file /home/haris/gunicorn/gunicorn_webapp.log --timeout 500
+
+[Install]
+WantedBy=multi-user.target
